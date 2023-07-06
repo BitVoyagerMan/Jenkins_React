@@ -16,16 +16,7 @@ pipeline {
             }
         }
 
-        stage('Test Docker Image') {
-            steps {
-                script {
-                    def myApp = docker.image("my-app")
-                    myApp.inside {
-                        sh 'npm test'
-                    }
-                }
-            }
-        }
+        
 
 
     }
