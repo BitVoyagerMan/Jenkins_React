@@ -11,8 +11,11 @@ RUN npm config set fetch-retry-maxtimeout 600000
 
 RUN npm install
 
+RUN npx next telemetry disable
+
+
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3000:3000
 
-CMD ["npm", "start"]
+CMD ["npm","run", "dev"]
